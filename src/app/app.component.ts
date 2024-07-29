@@ -4,17 +4,21 @@ import { RouterOutlet } from '@angular/router';
 
 import {  CardListComponent } from "./ui/cardlist/cardlist.component";
 import { CardsComponent } from "./ui/card/card.component";
+import { NavbarComponent } from "./ui/navbar/navbar.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CardsComponent, CardListComponent],
+  imports: [RouterOutlet, CardsComponent, CardListComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent{
   title = 'prodcut-app'
+  handleEvent(){
+    alert("Login")
+  }
 }
  
 //   export class AppComponent implements  OnInit {

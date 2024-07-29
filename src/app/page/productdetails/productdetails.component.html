@@ -1,0 +1,17 @@
+
+<div *ngIf="id" class="productList">
+    <div class="headingImage">
+      <h1 class="heading_dis">{{ productName[(id-1)].title }}</h1>
+      <img src={{productName[id-1].thumbnail}} alt={{productName[id-1].title}}/>
+    </div>
+    <div class="details">
+      <p class="price">Price: <span>{{productName[id-1].price}}</span></p>
+      <p class="rating">Rating: <span>{{productName[id-1].rating}}</span></p>
+      <p class="brand">Brand: <span>{{productName[id-1].brand}}</span></p>
+      <p class="tags">Tags: <span>{{productName[id-1].tags}}</span></p>
+    </div>
+     
+     
+    </div>
+     
+ 

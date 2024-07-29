@@ -21,14 +21,15 @@
 //   description: string;
 //   images: Array<string>;
 // }
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input ,Output} from '@angular/core';
 import { Product } from '../../interface/product.interface'
+import { NgOptimizedImage } from '@angular/common';
 
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
@@ -40,4 +41,8 @@ export class CardsComponent {
     thumbnail:"",
     category: ""
   };
+  @Output() myEvent = new EventEmitter<number>()
+  emitEvent(){
+    this.myEvent.emit(this.product.id)
+  }
 }
